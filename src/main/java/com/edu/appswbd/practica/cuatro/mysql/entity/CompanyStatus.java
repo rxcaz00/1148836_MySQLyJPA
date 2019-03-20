@@ -24,4 +24,8 @@ public class CompanyStatus {
         this.id = id;
         this.name = name;
     }
+
+    public CompanyStatus() {
+
+    }
 }

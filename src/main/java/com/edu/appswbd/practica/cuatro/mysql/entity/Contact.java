@@ -34,7 +34,7 @@ public class Contact {
     private Company company;
 
     @OneToMany(mappedBy = "contact")
-    private List<ContactDetail> contactDetailListList;
+    private List<ContactDetail> contactDetailList;
 
     public Contact(int id, String firstname, String lastname, String telephone, String email, Date version, Company company) {
         this.id = id;
@@ -44,5 +44,9 @@ public class Contact {
         this.telephone = telephone;
         this.version = version;
         this.company = company;
+    }
+
+    public Contact() {
+
     }
 }

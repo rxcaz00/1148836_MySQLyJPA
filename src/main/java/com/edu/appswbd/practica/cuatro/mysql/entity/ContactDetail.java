@@ -30,4 +30,8 @@ public class ContactDetail {
         this.dateOfBirth = dateOfBirth;
         this.contact = contact;
     }
+
+    public ContactDetail() {
+
+    }
 }

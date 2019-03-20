@@ -34,4 +34,8 @@ public class Company {
         this.version = version;
         this.companyStatus = companyStatus;
     }
+
+    public Company() {
+
+    }
 }

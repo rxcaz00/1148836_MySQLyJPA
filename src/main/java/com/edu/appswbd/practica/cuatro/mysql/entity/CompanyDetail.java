@@ -24,4 +24,8 @@ public class CompanyDetail {
         this.employeeStrength = employeeStrength;
         this.notes = notes;
     }
+
+    public CompanyDetail() {
+
+    }
 }
