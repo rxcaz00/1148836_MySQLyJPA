@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class CompanyStatusController {
 
     @Autowired
-    @Qualifier("companyStatusImpl")
+    @Qualifier("companyStatusServiceImpl")
     private CompanyStatusService companyStatusService;
 
     private static final Log Log = LogFactory.getLog(CompanyStatusController.class);

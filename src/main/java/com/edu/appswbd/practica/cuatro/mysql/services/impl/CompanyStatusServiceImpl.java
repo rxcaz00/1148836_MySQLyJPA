@@ -7,18 +7,20 @@ import com.edu.appswbd.practica.cuatro.mysql.repository.CompanyStatusRepository;
 import com.edu.appswbd.practica.cuatro.mysql.services.CompanyStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service("companyStatusServiceImpl")
 public class CompanyStatusServiceImpl implements CompanyStatusService {
 
     @Autowired
-    @Qualifier("companyDetailRepository")
+    @Qualifier("companyStatusRepository")
     private CompanyStatusRepository companyStatusRepository;
 
     @Autowired
-    @Qualifier("companyDetailConverter")
+    @Qualifier("companyStatusConverter")
     private CompanyStatusConverter companyStatusConverter;
 
     @Override
