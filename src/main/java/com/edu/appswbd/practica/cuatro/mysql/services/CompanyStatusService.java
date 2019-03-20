@@ -8,7 +8,7 @@ import java.util.List;
 public interface CompanyStatusService {
     public abstract CompanyStatusModel addCompanyStatus(CompanyStatusModel companyStatusModel);
 
-    public abstract List<CompanyStatusModel> listAllContacts();
+    public abstract List<CompanyStatusModel> listAllCompanyStatus();
 
     public abstract CompanyStatus findCompanyStatusById(int id);
 

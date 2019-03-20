@@ -14,5 +14,5 @@ public interface ContactDetailService {
 
     public abstract void removeContactDetail(int id);
 
-    public abstract ContactDetailModel findContacDetailByIdModel(int id);
+    public abstract ContactDetailModel findContactDetailByIdModel(int id);
 }
