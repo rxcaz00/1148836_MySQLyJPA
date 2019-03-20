@@ -1,0 +1,18 @@
+package com.edu.appswbd.practica.cuatro.mysql.services;
+
+import com.edu.appswbd.practica.cuatro.mysql.entity.ContactDetail;
+import com.edu.appswbd.practica.cuatro.mysql.model.ContactDetailModel;
+
+import java.util.List;
+
+public interface ContactDetailService {
+    public abstract ContactDetailModel addContactDetail(ContactDetailModel contactDetailModel);
+
+    public abstract List<ContactDetailModel> listAllContactDetails();
+
+    public abstract ContactDetail findContactDetailById(int id);
+
+    public abstract void removeContactDetail(int id);
+
+    public abstract ContactDetailModel findContacDetailByIdModel(int id);
+}
