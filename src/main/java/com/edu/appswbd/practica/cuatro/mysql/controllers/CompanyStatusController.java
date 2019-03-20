@@ -48,7 +48,7 @@ public class CompanyStatusController {
     @GetMapping("/showCompanyStatus")
     public ModelAndView showCompanyStatus() {
         ModelAndView mav = new ModelAndView(ViewConstant.COMPANYSTATUS);
-        mav.addObject("companyStatus",companyStatusService.listAllCompanyStatus());
+        mav.addObject("companyStatuses",companyStatusService.listAllCompanyStatus());
         return mav;
     }
 
