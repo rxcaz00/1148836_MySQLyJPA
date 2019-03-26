@@ -17,14 +17,11 @@
 
 <div class="jumbotron">
     <div class="container">
-        <h1>Company Detail Form</h1>
+        <h1>Company Status Form</h1>
         <br/>
         <form action="#" th:action="@{/companyStatus/addcompanystatus}" th:object="${companyStatusModel}" method="post">
             <input type="hidden" th:field="*{id}"></input>
-            Name: <input type="number" class="form-control" th:field="*{name}" th:value="${name}"></input>
-            <br/>
-            Company List: <input type="text" class="form-control" th:field="*{companyList}" th:value="${companyList}"></input>
-            <!-- lista -->
+            Name: <input type="text" class="form-control" th:field="*{name}" th:value="${name}"></input>
             <br/>
             <br/>
             <button class="btn btn-lg btn-primary btn-block" type="submit">

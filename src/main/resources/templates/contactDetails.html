@@ -12,38 +12,28 @@
 
 <body>
 <div class="container">
-    <h1>Companies</h1>
+    <h1>Contact Details</h1>
     <br/>
     <div class="panel panel-default">
         <div class="panel-heading"></div>
         <table class="table">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Version</th>
-                <th>Company Status</th>
-                <th>Contact List</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Contact</th>
                 <th>Actions</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="company : ${companies}">
-                <td th:text="${company.name}"></td>
-                <td th:text="${company.version}"></td>
-                <td th:text="${company.companyStatus}"></td>
-                <td th:switch="${company.contactList.size()}">
-                    <label th:case="'0'">
-                        No contacts.
-                    </label>
-                    <select th:case="*">
-                        <option th:each="contact : ${company.contactList}" th:value="${contact.id}" th:text="${contact.id}"></option>
-                    </select>
-                </td>
-                <td>
-                    <a href="#" th:href="@{/companies/companyForm?id=__${company.id}__}">
+            <tr th:each="contactDetail : ${contactDetails}">
+                <td th:text="${contactDetail.gender}"></td>
+                <td th:text="${contactDetail.dateOfBirth}"></td>
+                <td th:text="${contactDetail.contact}"></td>
+                    <a href="#" th:href="@{/contactDetails/contactDetailForm?id=__${contactDetail.id}__}">
                         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                     </a>
-                    <a href="#" th:href="@{/companies/removeCompany?id=__${company.id}__}">
+                    <a href="#" th:href="@{/contactDetails/removeContactDetail?id=__${contactDetail.id}__}">
                         <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                     </a>
                 </td>
@@ -53,8 +43,8 @@
     </div>
     <div th:if="${result == 1}" class="alert alert-success" role="alert">Agregado éxitosamente!</div>
     <div th:if="${result == 0}" class="alert alert-danger" role="alert">Hubo un error</div>
-    <a href="#" th:href="@{/companies/companyForm?id=0}">
-        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Add contact</button>
+    <a href="#" th:href="@{/contactDetails/contactDetailForm?id=0}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Add contact detail</button>
     </a>
     <!--
     <form th:action="@{/logout}" method="POST">

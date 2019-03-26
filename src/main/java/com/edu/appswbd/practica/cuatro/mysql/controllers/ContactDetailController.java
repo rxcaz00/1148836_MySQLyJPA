@@ -34,7 +34,7 @@ public class ContactDetailController {
         return ViewConstant.CONTACTDETAIL_FORM;
     }
 
-    @PostMapping("/addcompanydetail")
+    @PostMapping("/addcontactdetail")
     public String addContactDetail(@ModelAttribute(name = "contactDetailModel") ContactDetailModel contactDetailModel, Model model) {
         Log.info("Method:addContactDetail() -- Params: "+ contactDetailModel.toString());
         if(contactDetailService.addContactDetail(contactDetailModel) != null)
