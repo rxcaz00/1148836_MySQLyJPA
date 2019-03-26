@@ -17,7 +17,7 @@ public class CompanyStatus {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "companyStatus")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "companyStatus")
     private List<Company> companyList;
 
     public CompanyStatus(int id, String name) {

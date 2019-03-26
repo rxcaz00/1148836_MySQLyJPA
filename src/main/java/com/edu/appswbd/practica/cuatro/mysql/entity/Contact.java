@@ -29,11 +29,11 @@ public class Contact {
     @Column(name = "version")
     private Date version;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "companyId")
     private Company company;
 
-    @OneToMany(mappedBy = "contact")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "contact")
     private List<ContactDetail> contactDetailList;
 
     public Contact(int id, String firstname, String lastname, String telephone, String email, Date version, Company company) {

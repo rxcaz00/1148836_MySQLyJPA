@@ -21,11 +21,11 @@ public class Company {
     @Column(name = "version")
     private Date version;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "statusId")
     private CompanyStatus companyStatus;
 
-    @OneToMany(mappedBy = "company")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "company")
     private List<Contact> contactList;
 
     public Company(int id, String name, Date version, CompanyStatus companyStatus) {

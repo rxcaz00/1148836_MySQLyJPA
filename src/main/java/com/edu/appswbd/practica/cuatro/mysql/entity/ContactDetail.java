@@ -20,7 +20,7 @@ public class ContactDetail {
     @Column(name = "dateOfBirth")
     private Date dateOfBirth;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "contactId")
     private Contact contact;
 

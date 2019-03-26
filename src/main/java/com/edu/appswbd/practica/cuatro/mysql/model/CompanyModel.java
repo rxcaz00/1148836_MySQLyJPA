@@ -11,16 +11,9 @@ import java.util.List;
 public class CompanyModel {
     private int id;
     private String name;
-    private Date version;
+    private String version;
     private CompanyStatus companyStatus;
     private List<Contact> contactList;
-
-    public CompanyModel(int id, String name, Date version, CompanyStatus companyStatus) {
-        this.id = id;
-        this.name = name;
-        this.version = version;
-        this.companyStatus = companyStatus;
-    }
 
     public CompanyModel() {
 
