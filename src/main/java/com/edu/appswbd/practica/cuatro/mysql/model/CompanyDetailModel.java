@@ -8,12 +8,6 @@ public class CompanyDetailModel {
     private int employeeStrength;
     private String notes;
 
-    public CompanyDetailModel(int id, int employeeStrength, String notes) {
-        this.id = id;
-        this.employeeStrength = employeeStrength;
-        this.notes = notes;
-    }
-
     public CompanyDetailModel() {
 
     }

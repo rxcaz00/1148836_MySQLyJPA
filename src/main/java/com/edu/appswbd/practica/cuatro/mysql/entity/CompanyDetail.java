@@ -19,12 +19,6 @@ public class CompanyDetail {
     @Column(name = "notes")
     private String notes;
 
-    public CompanyDetail(int id, int employeeStrength, String notes) {
-        this.id = id;
-        this.employeeStrength = employeeStrength;
-        this.notes = notes;
-    }
-
     public CompanyDetail() {
 
     }

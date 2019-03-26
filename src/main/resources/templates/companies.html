@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>Contacts</title>
+    <title>Companies</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <!-- Custom styles for this template -->
@@ -36,7 +36,7 @@
                         No contacts.
                     </label>
                     <select th:case="*">
-                        <option th:each="contact : ${company.contactList}" th:value="${contact.id}" th:text="${contact.id}"></option>
+                        <option th:each="contact : ${company.contactList}" th:value="${contact.id}" th:text="${contact.email}"></option>
                     </select>
                 </td>
                 <td>
@@ -54,7 +54,7 @@
     <div th:if="${result == 1}" class="alert alert-success" role="alert">Agregado éxitosamente!</div>
     <div th:if="${result == 0}" class="alert alert-danger" role="alert">Hubo un error</div>
     <a href="#" th:href="@{/companies/companyForm?id=0}">
-        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Add contact</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Add company</button>
     </a>
     <!--
     <form th:action="@{/logout}" method="POST">

@@ -2,7 +2,10 @@ package com.edu.appswbd.practica.cuatro.mysql.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -18,12 +21,8 @@ public class CompanyStatus {
     private String name;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "companyStatus")
-    private List<Company> companyList;
-
-    public CompanyStatus(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    //private Set<Company> companyList = new HashSet<Company>();
+    private List<Company> companyList = new ArrayList<Company>();
 
     public CompanyStatus() {
 

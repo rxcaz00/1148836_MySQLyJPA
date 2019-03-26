@@ -1,11 +1,12 @@
 package com.edu.appswbd.practica.cuatro.mysql.model;
 
-import com.edu.appswbd.practica.cuatro.mysql.entity.Company;
 import com.edu.appswbd.practica.cuatro.mysql.entity.ContactDetail;
 import lombok.Data;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class ContactModel {
@@ -16,7 +17,8 @@ public class ContactModel {
     private String email;
     private String version;
     private String company;
-    private List<ContactDetail> contactDetailList;
+    //private Set<ContactDetail> contactDetailList = new HashSet<ContactDetail>();
+    private List<ContactDetail> contactDetailList = new ArrayList<ContactDetail>();
 
     public ContactModel() {
 

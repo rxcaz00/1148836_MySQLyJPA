@@ -2,8 +2,7 @@ package com.edu.appswbd.practica.cuatro.mysql.entity;
 
 import lombok.Data;
 import javax.persistence.*;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Data
 @Entity
@@ -34,7 +33,8 @@ public class Contact {
     private Company company;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "contact")
-    private List<ContactDetail> contactDetailList;
+    //private Set<ContactDetail> contactDetailList = new HashSet<ContactDetail>();
+    private List<ContactDetail> contactDetailList = new ArrayList<ContactDetail>();
 
     public Contact(int id, String firstname, String lastname, String telephone, String email, Date version, Company company) {
         this.id = id;
