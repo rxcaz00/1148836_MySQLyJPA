@@ -42,7 +42,7 @@
                                 No details.
                             </label>
                             <select th:case="*">
-                                <option th:each="contactDetail : ${contact.contactDetailList}" th:value="${contactDetail.id}" th:text="${contactDetail.id}"></option>
+                                <option th:each="contactDetail : ${contact.contactDetailList}" th:value="${contactDetail.id}" th:text="${contactDetail.gender}"></option>
                             </select>
                         </td>
                         <td>
