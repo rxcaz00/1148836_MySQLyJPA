@@ -1,9 +1,9 @@
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: postgres://pekeciogdimvtg:c443bcf33a3a030dd4afe3fa075243dbf57de811a46b5c42c72fece040325bc5@ec2-184-73-153-64.compute-1.amazonaws.com:5432/d3gmam2dfni0ot/d3gmam2dfni0ot?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: pekeciogdimvtg
-    password: c443bcf33a3a030dd4afe3fa075243dbf57de811a46b5c42c72fece040325bc5
+    url: postgres://qrxplbvgoxovol:0ca027c158af035dc766da09371932413dd26e8908a5ad9a326a6c3f56c22b2a@ec2-75-101-131-79.compute-1.amazonaws.com:5432/d2ded26j0d5bcj/d2ded26j0d5bcj?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: qrxplbvgoxovol
+    password: 0ca027c158af035dc766da09371932413dd26e8908a5ad9a326a6c3f56c22b2a
     maxActive: 10
     maxIdle: 5
     minIdle: 2
