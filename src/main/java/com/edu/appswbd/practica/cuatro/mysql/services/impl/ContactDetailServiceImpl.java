@@ -24,7 +24,7 @@ public class ContactDetailServiceImpl implements ContactDetailService {
     private ContactDetailConverter contactDetailConverter;
 
     @Override
-    public ContactDetailModel addContactDetail(ContactDetailModel contactDetailModel) {
+    public ContactDetailModel addContactDetail(ContactDetailModel contactDetailModel) throws Exception {
         ContactDetail temp = contactDetailConverter.convertContactDetailModel2ContactDetail(contactDetailModel);
         ContactDetail contactDetail = contactDetailRepository.save(temp);
         return contactDetailConverter.convertContactDetail2ContactDetailModel(contactDetail);

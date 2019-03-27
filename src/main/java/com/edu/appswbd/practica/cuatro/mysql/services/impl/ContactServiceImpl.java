@@ -24,7 +24,7 @@ public class ContactServiceImpl implements ContactService {
     private ContactConverter contactConverter;
 
     @Override
-    public ContactModel addContact(ContactModel contactModel) {
+    public ContactModel addContact(ContactModel contactModel) throws Exception {
         //Aquí nos pide una entidad, por lo tanto tenemos que transformar el contactModel a entidad
         Contact temp=contactConverter.convertContactModel2Contact(contactModel);
         Contact contact = contactRepository.save(temp);

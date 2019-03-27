@@ -24,7 +24,7 @@ public class CompanyServiceImpl implements CompanyService {
     private CompanyConverter companyConverter;
 
     @Override
-    public CompanyModel addCompany(CompanyModel companyModel) {
+    public CompanyModel addCompany(CompanyModel companyModel) throws Exception {
         Company temp = companyConverter.convertCompanyModel2Company(companyModel);
         Company company = companyRepository.save(temp);
         return companyConverter.convertCompany2CompanyModel(company);

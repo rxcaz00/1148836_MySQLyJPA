@@ -19,7 +19,7 @@ public class ContactDetailConverter {
     @Qualifier("contactRepository")
     private ContactRepository contactRepository;
 
-    public ContactDetail convertContactDetailModel2ContactDetail(ContactDetailModel contactDetailModel) {
+    public ContactDetail convertContactDetailModel2ContactDetail(ContactDetailModel contactDetailModel) throws Exception {
         ContactDetail contactDetail = new ContactDetail();
         List<Contact> contacts = contactRepository.findAll();
         for(Contact contact : contacts)
@@ -27,13 +27,9 @@ public class ContactDetailConverter {
                 contactDetail.setContact(contact);
                 break;
             }
-        try {
-            String[] dates = contactDetailModel.getDateOfBirth().split("T");
-            Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
-            contactDetail.setDateOfBirth(date);
-        } catch (Exception e) {
-
-        }
+        String[] dates = contactDetailModel.getDateOfBirth().split("T");
+        Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
+        contactDetail.setDateOfBirth(date);
         contactDetail.setGender(contactDetailModel.getGender());
         contactDetail.setId(contactDetailModel.getId());
         return contactDetail;

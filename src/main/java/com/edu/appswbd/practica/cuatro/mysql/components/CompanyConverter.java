@@ -19,7 +19,7 @@ public class CompanyConverter {
     @Qualifier("companyStatusRepository")
     private CompanyStatusRepository companyStatusRepository;
 
-    public Company convertCompanyModel2Company(CompanyModel companyModel) {
+    public Company convertCompanyModel2Company(CompanyModel companyModel) throws Exception {
         Company company = new Company();
         List<CompanyStatus> companyStatuses = companyStatusRepository.findAll();
         for(CompanyStatus companyStatus : companyStatuses)
@@ -30,13 +30,9 @@ public class CompanyConverter {
         company.setContactList(companyModel.getContactList());
         company.setId(companyModel.getId());
         company.setName(companyModel.getName());
-        try {
-            String[] dates = companyModel.getVersion().split("T");
-            Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
-            company.setVersion(date);
-        } catch (Exception e) {
-
-        }
+        String[] dates = companyModel.getVersion().split("T");
+        Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
+        company.setVersion(date);
         return company;
     }
 

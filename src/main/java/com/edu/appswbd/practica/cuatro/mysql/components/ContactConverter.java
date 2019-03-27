@@ -19,7 +19,7 @@ public class ContactConverter {
     @Qualifier("companyRepository")
     private CompanyRepository companyRepository;
 
-    public Contact convertContactModel2Contact(ContactModel contactModel) {
+    public Contact convertContactModel2Contact(ContactModel contactModel) throws Exception {
         Contact contact = new Contact();
         List<Company> companies = companyRepository.findAll();
         for(Company company : companies)
@@ -32,13 +32,9 @@ public class ContactConverter {
         contact.setId(contactModel.getId());
         contact.setLastname(contactModel.getLastname());
         contact.setTelephone(contactModel.getTelephone());
-        try {
-            String[] dates = contactModel.getVersion().split("T");
-            Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
-            contact.setVersion(date);
-        } catch (Exception e) {
-
-        }
+        String[] dates = contactModel.getVersion().split("T");
+        Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
+        contact.setVersion(date);
         contact.setContactDetailList(contactModel.getContactDetailList());
         return contact;
     }

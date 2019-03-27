@@ -35,7 +35,7 @@ public class CompanyController {
     }
 
     @PostMapping("/addcompany")
-    public String addCompany(@ModelAttribute(name = "companyModel")CompanyModel companyModel, Model model) {
+    public String addCompany(@ModelAttribute(name = "companyModel")CompanyModel companyModel, Model model) throws Exception {
         Log.info("Method: addCompany() -- Params: " + companyModel.toString());
         if(companyService.addCompany(companyModel) != null)
             model.addAttribute("result",1);

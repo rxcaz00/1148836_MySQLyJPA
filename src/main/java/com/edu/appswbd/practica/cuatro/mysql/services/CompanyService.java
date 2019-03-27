@@ -6,7 +6,7 @@ import com.edu.appswbd.practica.cuatro.mysql.model.CompanyModel;
 import java.util.List;
 
 public interface CompanyService {
-    public abstract CompanyModel addCompany(CompanyModel companyModel);
+    public abstract CompanyModel addCompany(CompanyModel companyModel) throws Exception;
 
     public abstract List<CompanyModel> listAllCompanies();
 

@@ -35,7 +35,7 @@ public class ContactDetailController {
     }
 
     @PostMapping("/addcontactdetail")
-    public String addContactDetail(@ModelAttribute(name = "contactDetailModel") ContactDetailModel contactDetailModel, Model model) {
+    public String addContactDetail(@ModelAttribute(name = "contactDetailModel") ContactDetailModel contactDetailModel, Model model) throws Exception {
         Log.info("Method:addContactDetail() -- Params: "+ contactDetailModel.toString());
         if(contactDetailService.addContactDetail(contactDetailModel) != null)
             model.addAttribute("result", 1);

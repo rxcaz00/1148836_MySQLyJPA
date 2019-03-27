@@ -6,7 +6,7 @@ import com.edu.appswbd.practica.cuatro.mysql.model.ContactDetailModel;
 import java.util.List;
 
 public interface ContactDetailService {
-    public abstract ContactDetailModel addContactDetail(ContactDetailModel contactDetailModel);
+    public abstract ContactDetailModel addContactDetail(ContactDetailModel contactDetailModel) throws Exception;
 
     public abstract List<ContactDetailModel> listAllContactDetails();
 

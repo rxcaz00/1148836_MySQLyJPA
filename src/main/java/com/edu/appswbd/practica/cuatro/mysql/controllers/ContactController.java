@@ -40,8 +40,7 @@ public class ContactController {
     }
 
     @PostMapping("/addcontact")
-    public String addContact(@ModelAttribute(name = "contactModel") ContactModel contactModel,
-                             Model model) {
+    public String addContact(@ModelAttribute(name = "contactModel") ContactModel contactModel, Model model) throws Exception{
         log.info("Method: addContact() -- Params: " + contactModel.toString());
         if (contactService.addContact(contactModel) != null) {
             model.addAttribute("result", 1);//esto es para que se muestre un mensaje de que se agregó éxitosamente
