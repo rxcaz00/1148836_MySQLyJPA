@@ -19,11 +19,11 @@
             <br/>
             <form action="#" th:action="@{/contactDetails/addcontactdetail}" th:object="${contactDetailModel}" method="post">
                 <input type="hidden" th:field="*{id}"></input>
-                Gender: <input type="text" class="form-control" th:field="*{gender}" th:value="${gender}"></input>
+                Gender: <input type="number" class="form-control" th:field="*{gender}" th:value="${gender}"></input>
                 <br/>
                 Date of Birth: <input type="datetime-local" class="form-control" th:field="*{dateOfBirth}" th:value="${dateOfBirth}"></input>
                 <br/>
-                Contact Telephone: <input type="text" class="form-control" th:field="*{contact}" th:value="${contact}"></input>
+                Contact Telephone: <input type="number" class="form-control" th:field="*{contact}" th:value="${contact}"></input>
                 <br/>
                 <br/>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">

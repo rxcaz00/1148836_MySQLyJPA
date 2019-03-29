@@ -27,6 +27,9 @@ public class ContactConverter {
                 contact.setCompany(company);
                 break;
             }
+
+        System.out.println(contact.getCompany().getName());
+
         contact.setEmail(contactModel.getEmail());
         contact.setFirstname(contactModel.getFirstname());
         contact.setId(contactModel.getId());

@@ -27,6 +27,9 @@ public class CompanyConverter {
                 company.setCompanyStatus(companyStatus);
                 break;
             }
+
+        System.out.println(company.getCompanyStatus().getName());
+
         company.setContactList(companyModel.getContactList());
         company.setId(companyModel.getId());
         company.setName(companyModel.getName());

@@ -27,6 +27,9 @@ public class ContactDetailConverter {
                 contactDetail.setContact(contact);
                 break;
             }
+
+        System.out.println(contactDetail.getContact().getTelephone());
+
         String[] dates = contactDetailModel.getDateOfBirth().split("T");
         Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dates[0] + " " + dates[1]);
         contactDetail.setDateOfBirth(date);
